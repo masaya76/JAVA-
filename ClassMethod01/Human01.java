@@ -1,11 +1,12 @@
-package classMethod.human; 
+package ClassMethod01;
 
 public class Human01 {
-    public String name;
+    public String name; 
     public int age;
-   
+
+
     public Human01() {
-        name = "yamada";
+        name = "山田";
         age = 20;
     }
 
