@@ -4,11 +4,14 @@ public class ClassMethod03 {
     public static void main(String[] args) {
         Human02 yamada = new Human02();
 
-        System.out.println("私の名前は、" + yamada.name + "です。");
+        System.out.println("nameha" + yamada.name + "desu");
         String profile = yamada.getProfile();
-        System.out.println(profile + "です。");
+        System.out.println(profile + "desu");
 
-        yamada.greet("田辺");
+        yamada.greet("tanabe");
         yamada.greet(null);
     }
 }
+
+
+/*The declared package "ClassMethod03" does not match the expected package ""*/
