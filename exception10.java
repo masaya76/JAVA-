@@ -1,13 +1,22 @@
 public class exception10 {
     public static void main(String[] args) {
         try {
-            System.out.println("100 / 0 ha?");
-            int result = 100/0;
-            System.out.println("Calculation result" + result);
-        } catch (Exception e) {
-            System.out.println("Exception occured");
-        } finally {
-            System.out.println("The end of the program");
+            exception10.division(100, 0);
+        } catch (ArithmeticException e) {
+            System.out.println("ArirhmeticException Exception occured");
+        } catch (IllegalArgumentException e) {
+            System.out.println("IllegalArgumentException Exception occured");
+            throw e;
         }
+        System.out.println("The end of the program");
+    }
+
+    public static void division(int a, int b) {
+        System.out.println(a + "/" + b + "ha?");
+        if (b == 0) {
+            throw new IllegalArgumentException("The argument is invalid");
+        } 
+        int result = a / b;
+        System.out.println("Calculation result" + result);
     }
 }
