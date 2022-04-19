@@ -33,7 +33,6 @@ public class Chapter10 {
     }
 
     public static void throwSQLException() throws SQLException {
-
         throw new SQLException("SQL error");
     }
 }
