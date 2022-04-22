@@ -1,3 +1,4 @@
+package Chapter;
 public class Chapter07 {
     public static void main(String[] args) {
         int distance = 12;

@@ -1,3 +1,4 @@
+package Chapter12;
 public class Chapter12 {
     public static void main(String[] agrs) {
         CapsuleMan human01 = new CapsuleMan("kobayasi", 32);

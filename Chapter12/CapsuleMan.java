@@ -1,3 +1,4 @@
+package Chapter12;
 public class CapsuleMan {
     private String name;
     private int age;
