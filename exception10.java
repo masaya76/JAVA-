@@ -13,7 +13,7 @@ public class exception10 {
 
     public static void readFile(String fileName) throws FileNotFoundException {
         System.out.println("Start reading the file");
-        FileReader fr = new FileReader(fileName);
+        FileReader hoge = new FileReader(fileName);
         System.out.println(fileName + "reading comple");
     }
 }
