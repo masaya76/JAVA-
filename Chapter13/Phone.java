@@ -1,6 +1,11 @@
 package Chapter13;
 
 public interface Phone {
-    int MAX_NUMBER_DIGITS = 11;
-    public void call(String number);
+    final int MAX_NUMBER_DIGITS = 11;
+    
+    void call(String number);
+    
+    default void poweroff() {
+        System.out.println("The off the power");
+    }
 }
