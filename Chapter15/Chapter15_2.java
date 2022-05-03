@@ -9,10 +9,17 @@ import java.io.BufferedWriter;
 //キーボードの入力エラー時の例外クラス
 import java.io.IOException;
 //java.ioの上位互換
-
+//ファイル・システムへのインタフェースを提供し、ファイル・システム内のファイルやその他の
+//オブジェクトにアクセスするためのオブジェクトのファクトリです
 import java.nio.file.FileSystem;
+//ファイルシステム用のファクトリメソッド。このクラスは
+//デフォルトのファイルシステムおよびファクトリメソッドを取得してほかの種類のファイルシステムを構築するための getDefault メソッドを定義します。
 import java.nio.file.FileSystems;
+//このクラスは、ファイル、ディレクトリ、またはその他の種類のファイルを操作する
+//staticメソッドだけで構成されます。
 import java.nio.file.Files;
+//ファイル・システム内のファイルを特定するために使用可能なオブジェクトです。
+//通常、それはシステムに依存するファイル・パスを表します。
 import java.nio.file.Path;
 
 public class Chapter15_2 {
