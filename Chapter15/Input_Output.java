@@ -12,6 +12,5 @@ public class Input_Output {
         } catch(IOException e) {
             System.out.println("I / O error");
         }
-
     }
 }

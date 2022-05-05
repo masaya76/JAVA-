@@ -1,0 +1,3 @@
+Hello
+GoodBye
+Written to file
