@@ -3,7 +3,7 @@ package Chapter15;
 import java.io.*;
 
 public class File_Input_2 {
-    public static void main(String[] agrs) {
+    public static void main(String[] args) {
         try { 
             BufferedReader br = new BufferedReader(new FileReader("text_15_1.txt"));
 
