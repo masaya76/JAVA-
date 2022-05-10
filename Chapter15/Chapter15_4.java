@@ -5,7 +5,7 @@ public class Chapter15_4 {
         for (int i = 1; i <= 2; i++) {
 
             Thread_practice mt = new Thread_practice(i);
-
+            
             Thread thread = new Thread(mt);
 
             thread.start();

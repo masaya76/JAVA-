@@ -1,6 +1,6 @@
 package Chapter15;
 
-public class Car extends Thread {
+public class Car implements Runnable{
     private String name;
 
     public Car(String nm) {
@@ -9,7 +9,12 @@ public class Car extends Thread {
     
     public void run() {
         for(int i = 0; i < 5; i++) {
-            System.out.println("I'm processing " + name);
+            try {
+                Thread.sleep(1000);
+                System.out.println("I'm processing " + name);
+            }catch(InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
