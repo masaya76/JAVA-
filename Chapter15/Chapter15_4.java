@@ -13,11 +13,8 @@ public class Chapter15_4 {
 
         for (int i = 1; i <= 3; i++) {
             try {
-
                 Thread.sleep(1000);
-
                 System.out.println("Chapter15_4 thread : " + i + "Number of times");
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
