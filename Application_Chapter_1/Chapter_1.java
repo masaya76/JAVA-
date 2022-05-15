@@ -10,14 +10,14 @@ public class Chapter_1 extends Frame {
 
     public Chapter_1() {
         super("sample");
-        addWindowListener(new SampleWindowListenere());
+        addWindowListener(new ChapterWindowListenere());
 
         setSize(250, 200);
         setVisible(true);
     }
 
-    class SampleWindowListenere extends WindowAdapter {
-        public void windowwClosing(WindowEvent e) {
+    class ChapterWindowListenere extends WindowAdapter {
+        public void windowClosing(WindowEvent e) {
             System.exit(0);
         }
     }
