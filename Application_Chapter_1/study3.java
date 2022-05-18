@@ -16,6 +16,23 @@ public class study3 extends Frame {
 
         bt = new Button("welcome");
         add(bt);
-        
+
+        addWindowFocusListener(new studyWindowListener());
+        bt.addActionListener(new studyActionListener());
+
+        setSize(250, 200);
+        setVisible(true);
+    }
+
+    public class studyWindowListener extends WindowAdapter {
+        public void windowClose(WindowEvent e) {
+            System.exit(0);
+        }
+    }
+
+    public class studyActionListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            bt.setLabel("hello");
+        }
     }
 }
