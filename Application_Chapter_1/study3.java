@@ -24,19 +24,25 @@ public class study3 extends Frame {
 
     public class a extends WindowAdapter {
         public void WindowClosing(WindowEvent e) {
-          System.exit(0);
+            System.exit(0);
         }
     }
 
-    public class  b implements MouseListener {
-        public void mouseClicked(MouseEvent e) {}
-        public void mouseReleased(MouseEvent e) {} 
-        public void mousePressed(MouseEvent e) {}
+    // public class  b implements MouseListener {
+    //     public void mouseClicked(MouseEvent e) {}
+    //     public void mouseReleased(MouseEvent e) {} 
+    //     public void mousePressed(MouseEvent e) {}
+    //     public void mouseEntered(MouseEvent e) {
+    //         bt.setLabel("welcome");
+    //     }
+    //     public void mouseExited(MouseEvent e) {
+    //         bt.setLabel("good morning");
+    //     }
+    // }
+
+    public class b extends MouseAdapter {
         public void mouseEntered(MouseEvent e) {
             bt.setLabel("welcome");
-        }
-        public void mouseExited(MouseEvent e) {
-            bt.setLabel("good morning");
         }
     }
 }
