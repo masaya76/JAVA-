@@ -1,21 +1,24 @@
 package Generics;
 
-import java.util.LinkedHashSet;
-import java.util.HashMap;
-import java.util.Set;
-import java.util.Map;
+import java.util.*;
 
 public class generics { 
     public static void main(String[] args) {
-        Basket<Apple> appleBasket = new Basket<>(new Apple("fuji"));
-        System.out.println(appleBasket.get().getNanme);
-    }
+        List<Apple> list = new ArrayList<Apple>() {
+            {
+                add("window");
+                add("mac");
+                add("linux");
+            }
+        }
+    };
 
     class Apple {
         private String name;
 
         Apple(String name) {
-            this.name = name;
+            Apple appleBasket = new Apple("fuzi");
+            System.out.println(appleBasket.getName());
         }
 
         String getName() {
