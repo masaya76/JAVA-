@@ -1,3 +1,4 @@
+package Human;
 class CarException extends Exception {
 }
 

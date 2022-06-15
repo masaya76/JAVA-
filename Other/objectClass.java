@@ -1,3 +1,5 @@
+package Other;
+
 abstract class Vehicle {
   protected int speed;
 
