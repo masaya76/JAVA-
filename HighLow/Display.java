@@ -9,21 +9,20 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import javafx.scene.control.LabelBuilder;
+
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 
 public class Display {
     private JFrame disp;
-
     private JPanel top_panel, mid_panel, bottom_panel;
-
-    private JLabel msg_lbll;
+    private JLabel msg_lbl;
     private JLabel parent_lbl, parent_suit_lbl, parent_no_lbl;
     private JLabel child_lbl, child_suit_lbl, child_no_lbl;
-
     private JButton btn_high, btn_Low;
-
     private Player parent, child;
 
     public Display(Player prn, Player chl){
@@ -61,13 +60,34 @@ public class Display {
         setLabelFont(parent_no_lbl, Color.WHITE, 100, 35, 80, 100, 16, true);
 
         child_lbl = new JLabel("Your card");
-        child_lbl = 
+        child_lbl = new JLabel("");
+        child_no_lbl = new JLabel(getNoStr(parent.GetNo()));
+
+        mid_panel.add(child_lbl);
+        mid_panel.add(child_suit_lbl);
+        mid_panel.add(child_no_lbl);
+
+        setLabelFont(child_lbl, Color.WHITE, 265, 10, 150, 20,14, false);
+        setLabelFont(child_suit_lbl, Color.LIGHT_GRAY, 300, 10, 80, 100, 16, false);
+        setLabelFont(child_no_lbl, Color.LIGHT_GRAY, 300, 35, 80, 100, 16, false);
     }
 
     public static void setPanel(JPanel panel, Color color, BorderLayout layout, Dimension dimension) {
         panel.setBackground(color);
         panel.setLayout(layout);
         panel.setPreferredSize(dimension);
+
+        return;
+    }
+
+    public static void setLabelFont(JLabel label, Color clr, int x_pos, int y_pos, int x_size, int y_size, int strSize, boolean opq){
+        label.setBackground(clr);
+        label.setLocation(x_pos, y_pos);
+        label.setSize(x_size, y_size);
+        label.setFont(new Font("MS Gothic", Font.PLAIN, strSize));
+        label.setHorizontalAlignment(JLabel.CENTER);
+        label.setVerticalAlignment(JLabel.CENTER);
+        label.setOpaque(opq);
 
         return;
     }
