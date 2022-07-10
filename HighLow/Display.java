@@ -70,6 +70,10 @@ public class Display {
         setLabelFont(child_lbl, Color.WHITE, 265, 10, 150, 20,14, false);
         setLabelFont(child_suit_lbl, Color.LIGHT_GRAY, 300, 10, 80, 100, 16, false);
         setLabelFont(child_no_lbl, Color.LIGHT_GRAY, 300, 35, 80, 100, 16, false);
+
+        bottom_panel = new JPanel();
+        setPanel(bottom_panel, Color.LIGHT_GRAY, new BorderLayout(), new Dimension(480, 50));
+        disp.add(bottom_panel, BorderLayout.SOUTH);
     }
 
     public static void setPanel(JPanel panel, Color color, BorderLayout layout, Dimension dimension) {
@@ -90,6 +94,50 @@ public class Display {
         label.setOpaque(opq);
 
         return;
+    }
+
+    public static ImageIcon getSuitIcon(int suit){
+        ImageIcon icon;
+
+        switch(suit){
+            case 0:
+                icon = new ImageIcon("./src/game/highandlow/img/spade.jpg");
+                return icon;
+
+            case 1:
+                icon = new ImageIcon("./src/game/highandlow/img/heart.jpg");
+                return icon;
+
+            case 2:
+                icon = new ImageIcon("./src/game/highandlow/img/diamond.jpg");
+                return icon;
+
+            case 3:
+                icon = new ImageIcon("./src/game/highandlow/img/clover.jpg");
+                return icon;
+
+            default:
+                return null;
+        }
+    }
+
+    public static String getNoStr(int no){
+        switch(no){
+            case 1:
+            return "A";
+
+            case 2:
+            return "J";
+
+            case 3:
+            return "Q";
+
+            case 4:
+            return "K";
+
+            default: 
+            return String.valueOf(no);
+        }
     }
 
 }
