@@ -73,7 +73,7 @@ public class Display {
         disp.add(bottom_panel, BorderLayout.SOUTH);
 
         btn_high = new JButton("HIGH");
-        setButton( btn_high, (ActionListener)this, 240, 50, 20 );
+        setButton( btn_high, ((ActionListener)this), 240, 50, 20 );
         bottom_panel.add( btn_high, BorderLayout.WEST );
 
         btn_low = new JButton("LOW");
@@ -83,10 +83,6 @@ public class Display {
         disp.setVisible(true);
 
     }
-
-
-    
-
 
     public static void setPanel(JPanel panel, Color color, BorderLayout layout, Dimension dimension) {
         panel.setBackground(color);
