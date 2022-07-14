@@ -9,9 +9,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-
-import javafx.scene.control.LabelBuilder;
-
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
@@ -22,7 +19,7 @@ public class Display {
     private JLabel msg_lbl;
     private JLabel parent_lbl, parent_suit_lbl, parent_no_lbl;
     private JLabel child_lbl, child_suit_lbl, child_no_lbl;
-    private JButton btn_high, btn_Low;
+    private JButton btn_high, btn_low;
     private Player parent, child;
 
     public Display(Player prn, Player chl){
@@ -74,7 +71,22 @@ public class Display {
         bottom_panel = new JPanel();
         setPanel(bottom_panel, Color.LIGHT_GRAY, new BorderLayout(), new Dimension(480, 50));
         disp.add(bottom_panel, BorderLayout.SOUTH);
+
+        btn_high = new JButton("HIGH");
+        setButton( btn_high, (ActionListener)this, 240, 50, 20 );
+        bottom_panel.add( btn_high, BorderLayout.WEST );
+
+        btn_low = new JButton("LOW");
+        setButton( btn_high,  (ActionListener)this, 240, 50, 20 );
+        bottom_panel.add(btn_low, BorderLayout.EAST);
+        
+        disp.setVisible(true);
+
     }
+
+
+    
+
 
     public static void setPanel(JPanel panel, Color color, BorderLayout layout, Dimension dimension) {
         panel.setBackground(color);
@@ -83,6 +95,7 @@ public class Display {
 
         return;
     }
+
 
     public static void setLabelFont(JLabel label, Color clr, int x_pos, int y_pos, int x_size, int y_size, int strSize, boolean opq){
         label.setBackground(clr);
@@ -95,6 +108,16 @@ public class Display {
 
         return;
     }
+
+
+    public static void setButton(JButton btn, ActionListener al, int x_size, int y_size, int strSize ){
+        btn.setPreferredSize(new Dimension(x_size, y_size));
+        btn.setFont(new Font("MS Gothic", Font.PLAIN, strSize));
+        btn.addActionListener(al);
+
+        return;
+    }
+
 
     public static ImageIcon getSuitIcon(int suit){
         ImageIcon icon;
