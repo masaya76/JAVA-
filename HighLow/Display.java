@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
 
+//Constructor (initialization process)
 public class Display {
     private JFrame disp;
     private JPanel top_panel, mid_panel, bottom_panel;
@@ -82,6 +83,19 @@ public class Display {
         
         disp.setVisible(true);
 
+    }
+
+    //Event when High or Low is selected
+    public void actionPerformed(ActionEvent e){
+        String cmd = e.getActionCommand();
+        int parent_no = parent.GetNo();
+        int child_no = child.GetNo();
+        int child_suit = child.GetSuit();
+
+        child_no_lbl.setBackground(Color.WHITE);
+        child_no_lbl.setText(getNoStr(child.GetNo()));
+        child_no_lbl.setBackground(Color.WHITE);
+        child_no_lbl.setIcon(getSuitIcon(child_suit));
     }
 
     public static void setPanel(JPanel panel, Color color, BorderLayout layout, Dimension dimension) {
