@@ -1,0 +1,7 @@
+tomcatDir=C:/Users/matya/Downloads/pleiades-2022-03-java-win-64bit-jre_20220326/tomcat/9
+eclipse.preferences.version=1
+fixTomcatHomeBug=fixed
+contextsDir=C:/Users/matya/Downloads/pleiades-2022-03-java-win-64bit-jre_20220326/tomcat/9/conf/Catalina/localhost
+tomcatVersion=tomcatV9
+computeSourcePath=true
+tomcatConfigFile=C:/Users/matya/Downloads/pleiades-2022-03-java-win-64bit-jre_20220326/tomcat/9/conf/server.xml

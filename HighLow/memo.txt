@@ -21,3 +21,13 @@ java.utilパッケージ　
 　今回簡易アプリ製作に当たり
 　システム側（親）とプレイヤー側（子）の対戦形式のアプリになる
 　親側のクラスを製作しないのは、子と違って動きが単一、かつ、ファイルの容量が重なるからと考える
+
+2022/07/24
+  コンパイル後、実行を行うと
+  以下のエラーが発生
+  
+  Exception in thread "main" java.lang.NullPointerException
+        at java.awt.Container.addImpl(Unknown Source)
+        at java.awt.Container.add(Unknown Source)
+        at HighLow.Display.<init>(Display.java:65)
+        at HighLow.GameMain.main(GameMain.java:13)

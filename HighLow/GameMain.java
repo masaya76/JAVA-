@@ -10,7 +10,7 @@ public class GameMain {
         Player child = new Player();
         parent.Draw(deck);
 
-        new Display( parent, child );
+        new Display(parent, child);
         return;
     }
 }
